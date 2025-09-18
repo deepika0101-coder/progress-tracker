@@ -5,9 +5,9 @@ let calender = document.querySelector(".cal");
 let status = document.querySelector(".i-status");
 let popupMain = document.querySelector(".popup-main");
 
-console.log(flexContainer);
-console.log(container);
-console.log(addBtn);
+// console.log(flexContainer);
+// console.log(container);
+// console.log(addBtn);
 
 // input height is 30px
 //21
@@ -24,11 +24,13 @@ for (let i=1; i<2; i++){
     container.append(cloneNode);
     container.append(addBtn);
      cloneNode.children[4].classList.add(`id${newTaskscreated}`)
-     console.log(cloneNode);
+    //  console.log(cloneNode);
     addBtnCss();
     newTaskscreated++;
+    // console.log(newTaskscreated);
 };
 }
+
 
 function addBtnCss() {
     if (newTaskscreated == 10){
@@ -58,7 +60,7 @@ addBtn.addEventListener("click",()=>{
 
 
  document.addEventListener("click",(e)=>{
-   console.log(e);
+//    console.log(e);
    for (let i=1; i<=15; i++){
     if (e.target.classList.contains(`id${i}`)){
         if (e.target.parentNode.children[5].children[0].classList.contains("hide")){
@@ -68,9 +70,9 @@ addBtn.addEventListener("click",()=>{
 
             for (let j=0; j<4; j++) {
                  e.target.parentNode.children[5].children[0].children[j].addEventListener("click",(e)=>{
-                console.log(e.target.textContent);
-                 console.log(e.target.parentNode.parentNode.parentNode);
-                 console.log(e.target.parentNode.parentNode.parentNode.children[3].value);
+                // console.log(e.target.textContent);
+                //  console.log(e.target.parentNode.parentNode.parentNode);
+                //  console.log(e.target.parentNode.parentNode.parentNode.children[3].value);
 
                  e.target.parentNode.parentNode.parentNode.children[3].value = `${e.target.textContent}`;
                 e.target.parentNode.children[5].children[0].classList.remove("popup");
@@ -87,5 +89,53 @@ addBtn.addEventListener("click",()=>{
         }
     }
    }
+ })
+
+ let input1;
+ let input2; 
+ let input3;
+ let input1val;
+ let input2val;
+ let input3val;
+
+//input eventListener for typing;
+
+document.addEventListener("input",(e)=>{
+ if (e.target.value){
+    for (let i=1; i<=15; i++) {
+    if(e.target.parentNode.children[4].classList.contains(`id${i}`)){
+        e.target.parentNode.children[0].classList.add(`one${i}`);
+                e.target.parentNode.children[1].classList.add(`two${i}`);
+                        e.target.parentNode.children[3].classList.add(`three${i}`);
+
+        console.log("is it true",e.target.parentNode.children[4].classList.contains(`id${i}`))
+           
+       
+            input1val =  e.target.parentNode.children[0].value;
+            input2val =  e.target.parentNode.children[1].value;
+            input3val =  e.target.parentNode.children[3].value;
+        
+          localStorage.setItem(`one${i}`,input1val);
+          localStorage.setItem(`two${i}`,input2val);
+          localStorage.setItem(`three${i}`, input3val);
+    
+          if(e.target.parentNode.children[0].classList.contains(`one${i}`)){
+            e.target.parentNode.children[0].value = localStorage.getItem(`one${i}`);
+          } 
+          else if (e.target.parentNode.children[1].classList.contains(`two${i}`)){
+            e.target.parentNode.children[1].value = localStorage.getItem(`two${i}`);
+          }
+          else if (e.target.parentNode.children[3].classList.contains(`three${i}`)){
+            e.target.parentNode.children[3].value = localStorage.getItem(`three${i}`);
+          };
+    }
+    }
+    
+
+    
+      
+    
+    
+ }
  })
 
