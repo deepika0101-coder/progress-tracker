@@ -1,0 +1,225 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+
+.heading{
+    display: block;
+    text-align: center;
+    font-family:"bungee";
+    font-size: 50px;
+}
+
+.main-page {
+     height: 500px;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     justify-content: center;
+}
+
+
+.container {
+    height: 50rem;
+    border: 4px dashed grey;
+    border-radius: 15px;
+    width:50rem;
+    position: relative;
+    
+}
+
+.navbar {
+    height: 70px;
+    border-bottom: 2px dashed darkgray;
+    display: flex;
+}
+
+.date {
+    padding: 0 20px;
+    font-size: 20px;
+    font-family: "bungee";
+    display: flex;
+    align-items: center;
+    width: 120px;
+    margin-bottom: 10px;
+    border-right: 2px dashed darkgray;
+    height: 70px;
+}
+
+.date p{
+    padding-left: 5px;
+    padding-top: 4px;
+}
+
+.goal {
+  padding: 0 20px;
+    font-size: 20px;
+    font-family:"bungee";
+    display: flex;
+    align-items: center;
+    width: 240px;
+    margin-bottom: 10px;
+    border-right: 2px dashed darkgray;
+    height: 70px;
+    padding-left:100px;
+}
+
+.goal p {
+    padding-left: 8px;
+    padding-top: 4px; 
+    font-size: 25px;
+}
+
+.status {
+   padding-left: 2.5rem;
+   font-size: 20px;
+   display: flex;
+   align-items: center;
+   font-family: "bungee";
+}
+
+.status p {
+    font-size: 25px;
+}
+
+input.two{
+ border-left: none;
+ border-right:none;
+ border-top: none;
+ width: 340px;
+  height: 30px;
+  font-size: 18px;
+  font-family:"bungee";
+   border-right:2px dashed black;
+}
+
+.three {
+    border-left: none;
+     border-right:none;
+     border-top: none;
+     width: 230px;
+     height: 30px;
+     font-size: 18px;
+     font-family:"bungee";
+      border-right:2px dashed black;
+}
+
+input.one {
+     border-left: none;
+     border-right:2px dashed black;
+     border-top: none;
+     width: 155px;
+      height: 30px;
+     font-size: 16px;
+     font-family:"bungee";
+}
+
+
+input:focus {
+outline:none;
+}
+
+.flex i {
+    padding: 6px 0;
+}
+
+.cal:hover , .task:hover, .i-status:hover {
+cursor: pointer;
+color: grey;
+}
+
+.add-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:100px;
+    font-size: 50px;
+    color: grey;
+}
+
+.add-btn:hover{
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.popup-main{
+    position: relative;
+}
+
+/* i used position relative for parent and for popup it's absolute to put the content on right side without flex. */
+.popup {
+    position:absolute;
+    right: -170px;
+    padding: 15px 15px;
+    font-family:"bungee";
+
+    /* how this bottom -50px even worked i didn't expected it to behave like that  */
+    z-index: 10;
+     bottom:-50px;
+     border-radius: 15px;
+
+}
+
+
+.triaged{
+    border-bottom: 2px dashed black;
+    padding: 2px ;
+    background-color: rgb(221, 237, 234);
+    color: 	rgb(15, 123, 108);
+    border: 2px solid rgb(15, 123, 108);
+}
+
+
+.informative {
+    border-bottom: 2px dashed black;
+    padding: 2px ;
+    background-color: rgb(244, 223, 235);
+    color: rgb(173, 26, 114);
+    border:2px solid rgb(173, 26, 114);
+}
+
+.pending {
+  border-bottom: 2px dashed black;
+    padding: 2px ;
+    background-color: rgb(221, 235, 241);
+    color: 	rgb(11, 110, 153);
+    border: 2px solid rgb(11, 110, 153);
+}
+
+.informative:hover {
+    cursor: pointer;
+}
+
+.pending{
+    cursor: pointer;
+}
+
+.triaged,.Na{
+    cursor: pointer;
+}
+
+.Na {
+    border-bottom: 2px dashed black;
+    padding: 2px ;
+    background-color: rgb(250, 235, 221);
+    color: rgb(217, 115, 13);
+    border: 2px solid rgb(217, 115, 13)
+}
+
+
+
+
+.clone {
+    padding: 12px 0 ;
+}
+
+
+.message {
+    font-size: 20px;
+    font-family: "bungee";
+}
